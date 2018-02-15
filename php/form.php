@@ -8,7 +8,7 @@
     }
 
 
-    echo '<input type="submit" value="Confirmer" />';
+    echo '<input type="submit" value="Confirmer" id="bouton" />';
     echo '</form>';
 
 ?>
