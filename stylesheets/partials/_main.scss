@@ -1,0 +1,24 @@
+main {
+    background-color: red; //structure coloration
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .formulaire {
+        background-color: $color-form;
+        height: 100%;
+        width: 75%;
+
+        .question {
+            height: 20%;
+            background-color: aquamarine;
+
+            input {
+                background-color: $color-input;
+            }
+
+        }
+    }
+}

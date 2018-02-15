@@ -1,0 +1,25 @@
+$color-background: #aaaaaa;
+$color-form: #fff;
+$color-input: rgb(25, 141, 97);
+
+body {
+    background-color: $color-background;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.page {
+    width: 70%;
+    height: auto;
+}
+
+@import "partials/_header";
+
+@import "partials/_main";
+
+@import "partials/_footer";
+
+
