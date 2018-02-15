@@ -1,11 +1,24 @@
 <?php
-    $debug = true; // 'true' pour afficher tout ce qui concerne le développement, 'false' pour le cacher
+    // On charge les variables
+    require("php/variables.php");
+    // On charge les fonctions
+    require("php/functions.php");
     
     if (isset($user) && !empty($user)) {
         session_name($user);
         session_start();
     }
+    else{
+        $current_page = "login";
+    }
+
+    if(isset($_GET['debug'])){
+        $temp = $_GET['debug'];
+        if($temp == "quest1" || $temp == "quest2")
+        $current_page = $temp;
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -24,8 +37,12 @@
         </header>
         <main>
             <?php
-            // require "php/login.php";
-            require("php/form.php");
+            if($current_page == 'quest1' || $current_page == 'quest2'){
+                require("php/form.php");
+            }
+            else{   
+                require "php/login.php";
+            }
             ?>
         </main>
         <footer>

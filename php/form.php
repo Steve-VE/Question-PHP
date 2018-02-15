@@ -1,12 +1,10 @@
 <?php
-    function get_random_value($array){
-        return $array;
-    }
+    
     echo '<form action="" method="post">';
 
     for($i = 0; $i < 5; $i++){
         echo '<div class="question">';
-        require("./database/questions/question_0.php");
+        require("./database/questions/question_". $i .".php");
         echo '</div>';
     }
 

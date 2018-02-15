@@ -1,12 +1,15 @@
 <?php
   if (isset($_POST['button'])) {
+    
     function attribution($input, $errorcheck) {
     if (isset($_POST['utilisateur']) || $errorcheck == false) {
       return $_POST['utilisateur'];
     } elseif($errorcheck) {echo "error";};
   };
+
   $user = attribution('utilisateur', false);}
 ?>
+
 <?php if (!isset($_POST['button']) && !isset($_POST['utilisateur'])): ?>
 <section class="login">
   <img src="../assets/images/clippy.jpg" alt="">
