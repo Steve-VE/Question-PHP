@@ -6,6 +6,10 @@ body {
   justify-content: center;
   margin: 0; }
 
+* {
+  margin: 0;
+  padding: 0; }
+
 .page {
   width: 70%;
   height: auto; }
@@ -35,9 +39,7 @@ main {
     flex-direction: column;
     border: 3px solid black;
     border-radius: 15px;
-    box-shadow: 0px 0px 10px 10px black;
-    padding-top: 10px;
-    padding-bottom: 10px; }
+    box-shadow: 0px 0px 10px 10px black; }
     main form .question {
       height: 15%;
       width: 100%;
