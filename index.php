@@ -1,5 +1,9 @@
+<?php
+    $debug = true; // 'true' pour afficher tout ce qui concerne le développement, 'false' pour le cacher
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,28 +14,17 @@
     <div class="page">
         <header>
             <!-- Need logo -->
+            <?php require("php/header.php"); ?>
         </header>
         <main>
-            <section class="formulaire">
-                <div class="question">
-
-                </div>
-                <div class="question">
-
-                </div>
-                <div class="question">
-
-                </div>
-                <div class="question">
-
-                </div>
-                <div class="question">
-
-                </div> 
-            </section>
+            <?php
+                require("php/form.php");
+            ?>
         </main>
         <footer>
-
+            <?php
+                require("php/footer.php");
+            ?>
         </footer>
     </div>
     
