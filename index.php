@@ -15,16 +15,18 @@
     <div class="page">
         <header>
             <!-- Need logo -->
-            <?php require("php/header.php"); ?>
+            <?php 
+            require("php/header.php"); 
+            ?>
         </header>
         <main>
             <?php
-                require("php/form.php");
+            require("php/form.php");
             ?>
         </main>
         <footer>
             <?php
-                require("php/footer.php");
+            require("php/footer.php");
             ?>
         </footer>
     </div>
