@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 <?php
     $debug = true; // 'true' pour afficher tout ce qui concerne le développement, 'false' pour le cacher
 ?>
 
+=======
+<?php require "php/login.php";
+  if (isset($user) && !empty($user)) {
+    session_name($user);
+    session_start();
+  }
+?>
+>>>>>>> 17a36e646a9cf3b7faeaf5db99075effde46aecb
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,9 +28,29 @@
             ?>
         </header>
         <main>
+<<<<<<< HEAD
             <?php
             require("php/form.php");
             ?>
+=======
+            <section class="formulaire">
+                <div class="question">
+
+                </div>
+                <div class="question">
+
+                </div>
+                <div class="question">
+
+                </div>
+                <div class="question">
+
+                </div>
+                <div class="question">
+
+                </div>
+            </section>
+>>>>>>> 17a36e646a9cf3b7faeaf5db99075effde46aecb
         </main>
         <footer>
             <?php
@@ -29,6 +58,6 @@
             ?>
         </footer>
     </div>
-    
+
 </body>
 </html>
