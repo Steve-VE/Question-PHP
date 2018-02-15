@@ -4,7 +4,17 @@
 //---------------------------------------------------- */
 
 
-
+function attribution($input) {
+    // if (isset($_POST['utilisateur']) || $errorcheck == false) {
+    //   return $_POST['utilisateur'];
+    // }
+    // elseif($errorcheck) {
+    //     echo "error";
+    // };
+    if (isset($_POST[$input])){
+        return $_POST[$input];
+    }
+}
 
 function get_random_value($value){
     if( is_array($value) ){

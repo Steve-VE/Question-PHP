@@ -1,12 +1,14 @@
 <?php
     // On charge les variables
-    require("php/variables.php");
+    require "php/variables.php";
     // On charge les fonctions
-    require("php/functions.php");
+    require "php/functions.php";
     
+    $user = attribution('utilisateur');
     if (isset($user) && !empty($user)) {
         session_name($user);
         session_start();
+        $current_page = "quest1";
     }
     else{
         $current_page = "login";
@@ -14,7 +16,7 @@
 
     if(isset($_GET['debug'])){
         $temp = $_GET['debug'];
-        if($temp == "quest1" || $temp == "quest2")
+        if($temp == "quest1" || $temp == "quest2" || $temp == "result")
         $current_page = $temp;
     }
 ?>
@@ -32,13 +34,17 @@
     <div class="page">
         <header>
             <?php 
-            require("php/header.php"); 
+            var_dump($current_page);
+            require "php/header.php" ; 
             ?>
         </header>
         <main>
             <?php
             if($current_page == 'quest1' || $current_page == 'quest2'){
-                require("php/form.php");
+                require "php/form.php";
+            }
+            else if($current_page == "result"){
+                require "php/result.php";
             }
             else{   
                 require "php/login.php";
@@ -47,7 +53,7 @@
         </main>
         <footer>
             <?php
-            require("php/footer.php");
+            require "php/footer.php";
             ?>
         </footer>
     </div>

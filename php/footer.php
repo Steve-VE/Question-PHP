@@ -12,6 +12,9 @@ if($debug){ ?>
         <li>
             <a href="?debug=quest2">Questions 5-10</a>
         </li>
+        <li>
+            <a href="?debug=result">Résultat</a>
+        </li>
     </ul>
 <?php
 }
