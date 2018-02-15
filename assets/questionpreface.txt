@@ -1,0 +1,37 @@
+****************************
+//TOUT CECI EST MODIFIABLE//
+****************************
+
+
+1. Comment peut-on créer une variable "test" contenant la valeur "coucou" ?
+
+    REP: $test:"coucou"
+
+2. Quelle loop php permet d'afficher ces choix ?
+
+    QCM
+
+3. Quelle fonction est sans erreurs ?
+
+4. créer une fonction qui permet de mettre un mot en majuscule ?
+
+5. Est-il important de sanitiser  des inputs de type radio ?
+
+6. Comment modifier une classe en php ?
+
+7. ==> (ARRAY) <==
+
+    foreach ($things as $key => $value)
+
+        que vas afficher: echo $value;
+        Et             : echo $key;
+
+8. Que permet cette syntaxe alternative ?
+
+    <?php if ($a == 5): ?>
+    
+    <?php endif; ?>
+
+9. A quoi sert la fonction isset() ?
+
+10. Comment a partir du PHP injecter un paragraphe a l'intérieur d'une div ?

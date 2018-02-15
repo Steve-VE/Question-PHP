@@ -1,6 +1,6 @@
 $color-background: #16242F;
-$color-form: rgb(233, 233, 233);
-$color-question: rgb(184, 184, 184);
+$color-form: rgb(214, 214, 214);
+$color-question: rgb(148, 148, 148);
 $color-input: rgb(25, 141, 97);
 
 body {
@@ -12,6 +12,11 @@ body {
     margin: 0;
 }
 
+*{margin: 0;
+padding: 0;}
+
+
+
 .page {
     width: 70%;
     height: auto;
@@ -22,5 +27,4 @@ body {
 @import "partials/_main";
 
 @import "partials/_footer";
-
 
