@@ -1,7 +1,11 @@
 $color-background: #16242F;
+$color-background2 : rgb(230, 230, 230);
 $color-form: rgb(214, 214, 214);
 $color-question: rgb(148, 148, 148);
 $color-input: rgb(25, 141, 97);
+$color-border1: rgb(0, 0, 0);
+$color-border2: #66CEDC;
+
 
 body {
     background-color: $color-background;
@@ -26,5 +30,8 @@ padding: 0;}
 
 @import "partials/_main";
 
+@import "partials/_login";
+
 @import "partials/_footer";
+
 

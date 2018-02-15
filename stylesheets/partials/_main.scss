@@ -7,14 +7,14 @@ main {
     justify-content: center;
     align-items: center;
 
-    form {
+    .formq {
         background-color: $color-form;
         height: 100%;
         width: 75%;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
-        border: 3px solid black;
+        border: 3px solid $color-border1;
         border-radius: 15px;
         box-shadow: 0px 0px 10px 10px black;
         // padding-top: 10px;
@@ -25,8 +25,8 @@ main {
             height: 15%;
             width: 100%;
             background-color: $color-question;
-            border-top: 3px solid #66CEDC;
-            border-bottom: 3px solid #66CEDC;
+            border-top: 3px solid $color-border2;
+            border-bottom: 3px solid $color-border2;
         }
         
         #bouton {

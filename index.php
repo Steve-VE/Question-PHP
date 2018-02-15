@@ -24,8 +24,8 @@
         </header>
         <main>
             <?php
-            // require "php/login.php";
-            require("php/form.php");
+            require ("php/login.php");
+            //require("php/form.php");
             ?>
         </main>
         <footer>

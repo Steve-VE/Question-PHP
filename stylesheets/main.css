@@ -30,7 +30,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center; }
-  main form {
+  main .formq {
     background-color: #d6d6d6;
     height: 100%;
     width: 75%;
@@ -40,16 +40,47 @@ main {
     border: 3px solid black;
     border-radius: 15px;
     box-shadow: 0px 0px 10px 10px black; }
-    main form .question {
+    main .formq .question {
       height: 15%;
       width: 100%;
       background-color: #949494;
       border-top: 3px solid #66CEDC;
       border-bottom: 3px solid #66CEDC; }
-    main form #bouton {
+    main .formq #bouton {
       display: flex;
       align-self: center;
       width: 20%; }
+
+.login {
+  background-color: #e6e6e6;
+  width: 30vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center; }
+  .login .connexion {
+    width: 60%;
+    height: 50%;
+    background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    flex-direction: column;
+    border: 3px solid #66CEDC;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 4px #16242F;
+    padding: 40px; }
+    .login .connexion input {
+      width: 70%;
+      height: 15%;
+      display: flex;
+      align-self: center;
+      justify-content: center; }
+    .login .connexion button {
+      width: 50%;
+      height: 20%;
+      display: flex;
+      align-self: center;
+      justify-content: center; }
 
 footer {
   background-color: #16242F;
