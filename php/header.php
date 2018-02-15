@@ -1,1 +1,1 @@
-<img src="assets/index.png" alt="Logo BeCode">
+<img src="assets/images/index.png" alt="Logo BeCode">
