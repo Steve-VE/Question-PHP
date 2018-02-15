@@ -14,7 +14,6 @@
 <body>
     <div class="page">
         <header>
-            <!-- Need logo -->
             <?php 
             require("php/header.php"); 
             ?>

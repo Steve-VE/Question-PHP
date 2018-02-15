@@ -1,0 +1,1 @@
+<img src="assets/index.png" alt="Logo BeCode">
