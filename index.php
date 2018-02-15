@@ -10,7 +10,7 @@
 <body>
     <div class="page">
         <header>
-            <!-- Need logo -->
+            <img src="assets/index.png" alt="Logo BeCode">
         </header>
         <main>
             <section class="formulaire">

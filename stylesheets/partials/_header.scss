@@ -1,4 +1,12 @@
 header {
-    background-color: blue; //structure coloration
+    // background-color: blue; //structure coloration
+    background-color: $color-background;
     height: 20vh;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: auto;
+        height: 20vh;
+    }
 }
