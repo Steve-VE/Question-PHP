@@ -1,3 +1,9 @@
+<?php require "php/login.php";
+  if (isset($user) && !empty($user)) {
+    session_name($user);
+    session_start();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,13 +33,13 @@
                 </div>
                 <div class="question">
 
-                </div> 
+                </div>
             </section>
         </main>
         <footer>
 
         </footer>
     </div>
-    
+
 </body>
 </html>
