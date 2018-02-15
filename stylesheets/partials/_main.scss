@@ -10,9 +10,14 @@ main {
         background-color: $color-form;
         height: 100%;
         width: 75%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        
 
         .question {
-            height: 20%;
+            height: 18%;
+            width: 100%;
             background-color: aquamarine;
 
             input {
