@@ -17,8 +17,8 @@ main {
         border: 3px solid $color-border1;
         border-radius: 15px;
         box-shadow: 0px 0px 10px 10px black;
-        // padding-top: 10px;
-        // padding-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         
 
         .question {
@@ -27,6 +27,18 @@ main {
             background-color: $color-question;
             border-top: 3px solid $color-border2;
             border-bottom: 3px solid $color-border2;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            align-items: center;
+
+            label {
+                float: left;
+            }
+
+            input {
+                float: right;
+            }
         }
         
         #bouton {

@@ -4,7 +4,7 @@ $rnd_name = get_random_value($variable_names);
 $rnd_line = get_random_value($greetings);
 
 $type = "text";
-$statement = "Créez une fonction qui permet de mettre un mot en majuscule";
+$statement = "Utilisez une fonction en une ligne qui permet de mettre un mot en majuscule";
 $answer = $rnd_name . "='". $rnd_line ."';";
 ?>
 

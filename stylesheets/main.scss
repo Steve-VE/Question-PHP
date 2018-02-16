@@ -26,6 +26,12 @@ padding: 0;}
     height: auto;
 }
 
+.debug {
+    position: fixed;
+    bottom: 0;
+    padding: 12px;
+}
+
 @import "partials/_header";
 
 @import "partials/_main";
