@@ -4,6 +4,7 @@
 //---------------------------------------------------- */
 
 $debug = true; // 'true' pour afficher tout ce qui concerne le développement, 'false' pour le cacher
+$id_question = 0; // Correspond au numéro de la question
 
 // Tableau qui contient une liste de nom de variables
 $variable_names = ["test", "ma_var", "var"];

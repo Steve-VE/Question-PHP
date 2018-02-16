@@ -4,8 +4,9 @@
 
     for($i = 0; $i < 5; $i++){
         echo '<div class="question">';
-        require("./database/questions/question_". $i .".php");
+        require("./database/questions/question_". $id_question .".php");
         echo '</div>';
+        $id_question++; // On incrémente de 1 pour que la prochaine question à afficher soit la suivante.
     }
 
 
