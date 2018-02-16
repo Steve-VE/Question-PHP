@@ -39,6 +39,13 @@
         </header>
         <main>
             <?php
+            if(isset($_POST)){
+                echo '$_POST : '; var_dump($_POST); echo '<br/>';
+            }
+            if(isset($_SESSION)){
+                echo '$_SESSION : '; var_dump($_SESSION); echo '<br/>';
+            }
+
             if($current_page == 'quest1' || $current_page == 'quest2'){
                 require "php/form.php";
             }
