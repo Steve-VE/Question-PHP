@@ -33,8 +33,7 @@
 <body>
     <div class="page">
         <header>
-            <?php 
-            var_dump($current_page);
+            <?php
             require "php/header.php" ; 
             ?>
         </header>
