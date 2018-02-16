@@ -15,6 +15,9 @@ if($debug){ ?>
         <li>
             <a href="?debug=result">Résultat</a>
         </li>
+        <li>
+            <a href="?debug=logout">Déconnection</a>
+        </li>
     </ul>
 <?php
 }

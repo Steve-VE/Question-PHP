@@ -1,9 +1,9 @@
 
 <section class="login">
   <?php  if (!isset($_POST['button']) && !isset($_POST['utilisateur'])){
-  echo '<img src="../assets/images/clippy.jpg" alt="">'; }
+  echo '<img src="assets/images/clippy.jpg" alt="">'; }
   else {
-    echo '<img src="../assets/images/badclippy.jpg" alt="">';
+    echo '<img src="assets/images/badclippy.jpg" alt="">';
     } 
   ?>
   <form class="connexion" action="" method="post">

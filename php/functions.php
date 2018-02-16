@@ -27,4 +27,10 @@ function random($min, $max, $seed){
     return rand($min, $max);
 }
 
+
+// FONCTION PROPRE AUX SESSIONS
+
+function session_active(){
+    return (isset($_SESSION['user']) && $_SESSION != "");
+}
 ?>
