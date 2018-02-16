@@ -1,5 +1,4 @@
 <?php
-
 $rnd_name = get_random_value($variable_names);
 $rnd_line = get_random_value($greetings);
 

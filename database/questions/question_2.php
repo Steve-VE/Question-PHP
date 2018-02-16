@@ -1,15 +1,13 @@
 <?php
-
-$rnd_name = get_random_value($variable_names);
-$rnd_line = get_random_value($greetings);
-
 $type = "radio";
 $statement = "Quelle fonction est sans erreurs ?";
 
+// On stocke la bonne réponse dans la variable '$good_answer'...
 $good_answer = "<pre>function afficher(\$texte){<br/>
                 print_r(\$texte);</br> 
                 }</pre>";
 
+// ... on définit les différentes options possible pour le QCM, en oubliant pas d'y inclure la bonne réponse ('$good_answer')...
 $options = [
     $good_answer,
 
@@ -21,40 +19,26 @@ $options = [
     print_r(\$texte)</br>
     }</pre>"
 ];
+// ... on mélange le tableau contenant les options...
 shuffle($options);
 
-// Dans le cas d'une question à choix multiple, on définit la réponse étant comme l'index correspondant à la bonne réponse
-
-
 echo '<p>'. $statement .'</p>';
-for($i = 0; $i < count($options); $i++){
-    $current_option = "Option_" . ($i + 1);
-    echo '<input type="radio" id="Question_'. $id_question .'" name="'. $current_option .'" value="'. $current_option .'"/>';
 
-    if( $options[$i] == $good_answer){
+// ... et on utilise une boucle pour parcourir le tableau et afficher une à une les différentes options.
+for($j = 0; $j < count($options); $j++){
+
+    $current_option = "Option_" . ($j + 1);
+    // Si l'option actuelle correspond à la bonnse réponse...
+    if( $options[$j] == $good_answer){
+        // ... on indique que cette option est la bonne réponse via la fonction 'define_answer'
         define_answer( $current_option );
     }
-
+    
+    echo '<div class="item upside">';
+    echo '<input type="radio" id="Question_'. $id_question .'" name="'. $current_option .'" value="'. $current_option .'"/>';
     echo '<label for="'. $current_option .'">';
-    echo $options[$i];
+    echo $options[$j];
     echo '</label>';
+    echo '</div>';
 }
 ?>
-<!-- <input type="radio" name="Question_3"/>
-<pre>
-  function afficher(){<br/>
-    print_r()</br>
-  }
-</pre>
-<input type="radio" name="Question_3" />
-<pre>
-  function afficher($texte){<br/>
-    print_r($texte)</br>
-  }
-</pre>
-<input type="radio" name="Question_3" />
-<pre>
-  function afficher($texte){<br/>
-    print_r($texte);</br>
-  }
-</pre> -->
