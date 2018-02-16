@@ -7,14 +7,29 @@ $type = "radio";
 $statement = "Quelle fonction est sans erreurs ?";
 $answer = $rnd_name . "='". $rnd_line ."';";
 ?>
-
-<label for="Question_3"> <?php echo $statement; ?> </label>
-<input type="radio" name="Question_3"/><pre>function afficher()
-  {<br/>print_r()</br>}
-</pre>
-<input type="radio" name="Question_3" /><pre>function afficher($texte)
-  {<br/>print_r($texte)</br>}
-</pre>
-<input type="radio" name="Question_3" /><pre>function afficher($texte)
-  {<br/>print_r($texte);</br>}
-</pre>
+<div class="label">
+    <label for="Question_3"> <?php echo $statement; ?> </label>
+</div>
+<div class="input">
+    <div class="side">
+        <input type="radio" name="Question_3"/>
+            <pre>
+                function afficher(){
+                print_r()}
+            </pre>
+    </div>
+    <div class="side">
+        <input type="radio" name="Question_3" />
+            <pre>
+                function afficher($texte){
+                print_r($texte)}
+            </pre>
+    </div>
+    <div class="side">
+        <input type="radio" name="Question_3" />
+            <pre>
+                function afficher($texte){
+                print_r($texte);}
+            </pre>
+    </div>
+</div>
