@@ -4,9 +4,9 @@ $rnd_name = get_random_value($variable_names);
 $rnd_line = get_random_value($greetings);
 
 $type = "text";
-$statement = "Comment créer une variable \$" . $rnd_name . " qui contient la valeur \"" . $rnd_line . "\" ?";
+$statement = "Créez une fonction qui permet de mettre un mot en majuscule";
 $answer = $rnd_name . "='". $rnd_line ."';";
 ?>
 
-<label for="question 1"> <?php echo $statement; ?> </label>
-<input type="text" name="Question 1"/>
+<label for="Question 4"> <?php echo $statement; ?> </label>
+<input type="text" name="Question 4"/>
