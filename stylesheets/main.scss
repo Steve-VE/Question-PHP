@@ -26,6 +26,20 @@ padding: 0;}
     height: auto;
 }
 
+.debug {
+    position: fixed;
+    top: 0;
+    padding: 12px;
+    background-color: white;
+
+    &.left{
+        left:0;
+    }
+    &.right{
+        right:0;
+    }
+}
+
 @import "partials/_header";
 
 @import "partials/_main";
@@ -33,5 +47,6 @@ padding: 0;}
 @import "partials/_login";
 
 @import "partials/_footer";
+
 
 

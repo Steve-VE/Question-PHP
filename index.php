@@ -44,9 +44,11 @@
         $current_page = "quest1";
     }
 
+    echo '<div class="debug left">';
     echo "Session active ? " . (session_active() ? 'true' : 'false') . '<br/>';
     echo "Session status : " . session_status() .'<br/>';
     echo "Page à afficher : " . $current_page;
+    echo '</div>';
 ?>
 
 <!DOCTYPE html>
@@ -68,12 +70,21 @@
         <main>
             <?php
             if($debug){
-                echo '<div class="debug">';
+                echo '<div class="debug right">';
                 if(isset($_POST)){
-                    echo '$_POST : '; var_dump($_POST); echo '<br/>';
+                    echo '$_POST : '; 
+                    var_dump($_POST); 
+                    echo '<br/>';
                 }
                 if(isset($_SESSION)){
-                    echo '$_SESSION : '; var_dump($_SESSION); echo '<br/>';
+                    echo '$_SESSION : '; 
+                    var_dump($_SESSION); 
+                    echo '<br/>';
+                }
+                if(isset($_GET)){
+                    echo '$_GET : '; 
+                    var_dump($_GET); 
+                    echo '<br/>';
                 }
                 echo '</div>';
             }
