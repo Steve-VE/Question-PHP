@@ -11,4 +11,4 @@ $answer = $rnd_name . "='". $rnd_line ."';";
 <label for="Question 5"> <?php echo $statement; ?> </label>
 <input type="radio" name="Question 5"/> <label> Oui </label><br />
 <input type="radio" name="Question 5"/> <label> Non </label><br />
-<input type="radio" name="Question 5"/> <label> Non, uniquement les type "text" </label>
+<input type="radio" name="Question 5"/> <label> Non, uniquement les types "text" </label>
