@@ -10,14 +10,45 @@ function attribution($input) {
     }
 }
 
+// Permet de définir une réponse à une question
+function define_answer($answer){
+    global $id_question;
+    $answers[$id_question] = $answer;
+    $_SESSION['answers'][$id_question] =  $answers[$id_question];
+}
+
 // Renvoit au hasard un élément pris dans un tableau
 function get_random_value($value){
     if( is_array($value) ){
-        return $value[ rand(0, count($value) - 1) ];
+        return $value[ random(0, count($value) - 1, seed()) ];
     }
     else{
         return $value;
     }
+}
+
+function seed(){
+    $seed_string = "default";
+    $seed = 0;
+
+    if(isset($_SESSION['user'])){
+        $seed_string = $_SESSION['user'];
+    }
+    for($i = strlen($seed_string) - 1; $i >= 0; $i--){
+        $seed += ord($seed_string[$i]);
+    }
+    return $seed;
+}
+
+// Renvoit une valeur contenu dans un champ du formulaire
+function get_value_for($input_name){
+    $result = "";
+
+    if(isset($_POST[$input_name])){
+        $result = $_POST[$input_name];
+    }
+
+    return $result;
 }
 
 
