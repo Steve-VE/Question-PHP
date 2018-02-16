@@ -8,5 +8,5 @@ $statement = "Quel boucle permet d'afficher ces choix: ";
 $answer = $rnd_name . "='". $rnd_line ."';";
 ?>
 
-<label for="Question 2"> <?php echo $statement; ?> </label>
-<input type="radio" name="Question 2"/>
+<label for="Question_2"> <?php echo $statement; ?> </label>
+<input type="radio" name="Question_2"/>

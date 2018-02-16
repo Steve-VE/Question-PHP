@@ -8,5 +8,5 @@ $statement = "Comment créer une variable \"" . $rnd_name . "\" qui contient la 
 $answer = $rnd_name . "='". $rnd_line ."';";
 ?>
 
-<label for="Question 1"> <?php echo $statement; ?> </label>
-<input type="text" name="Question 1"/>
+<label for="Question_1"> <?php echo $statement; ?> </label>
+<input type="text" name="Question_1"/>

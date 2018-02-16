@@ -8,5 +8,5 @@ $statement = "Utilisez une fonction en une ligne qui permet de mettre un mot en 
 $answer = $rnd_name . "='". $rnd_line ."';";
 ?>
 
-<label for="Question 4"> <?php echo $statement; ?> </label>
-<input type="text" name="Question 4"/>
+<label for="Question_4"> <?php echo $statement; ?> </label>
+<input type="text" name="Question_4"/>

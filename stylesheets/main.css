@@ -4,45 +4,34 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  margin: 0;
-}
+  margin: 0; }
 
 * {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 .page {
   width: 70%;
-  height: auto;
-}
+  height: auto; }
 
 .debug {
   position: fixed;
   top: 0;
   padding: 12px;
-  background-color: white;
-}
-
-.debug.left {
-  left: 0;
-}
-
-.debug.right {
-  right: 0;
-}
+  background-color: white; }
+  .debug.left {
+    left: 0; }
+  .debug.right {
+    right: 0; }
 
 header {
   background-color: #16242F;
   height: 20vh;
   display: flex;
-  justify-content: center;
-}
-
-header img {
-  width: auto;
-  height: 20vh;
-}
+  justify-content: center; }
+  header img {
+    width: auto;
+    height: 20vh; }
 
 main {
   background-color: #16242F;
@@ -50,48 +39,37 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-main .formq {
-  background-color: #d6d6d6;
-  height: 100%;
-  width: 75%;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  border: 3px solid black;
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px 10px black;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-main .formq .question {
-  height: 15%;
-  width: 100%;
-  background-color: #949494;
-  border-top: 3px solid #66CEDC;
-  border-bottom: 3px solid #66CEDC;
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  align-items: center;
-}
-
-main .formq .question label {
-  float: left;
-}
-
-main .formq .question input {
-  float: right;
-}
-
-main .formq #bouton {
-  display: flex;
-  align-self: center;
-  width: 20%;
-}
+  align-items: center; }
+  main .formq {
+    background-color: #d6d6d6;
+    height: 100%;
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 10px black;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+    main .formq .question {
+      height: 15%;
+      width: 100%;
+      background-color: #949494;
+      border-top: 3px solid #66CEDC;
+      border-bottom: 3px solid #66CEDC;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      align-items: center; }
+      main .formq .question label {
+        float: left; }
+      main .formq .question input {
+        float: right; }
+    main .formq #bouton {
+      display: flex;
+      align-self: center;
+      width: 20%; }
 
 .login {
   background-color: #e6e6e6;
@@ -103,59 +81,50 @@ main .formq #bouton {
   padding-right: 50px;
   padding-left: 50px;
   border-radius: 120px 120px 0px 0px;
-  border: 7px double #929292;
-}
-
-.login img {
-  width: auto;
-  height: 50%;
-  border: 4px solid #66CEDC;
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px 3px #16242F;
-  padding: 40px;
-  background-color: white;
-}
-
-.login .connexion {
-  width: 40%;
-  height: 50%;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-self: center;
-  flex-direction: column;
-  border: 4px solid #66CEDC;
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px 3px #16242F;
-  padding: 40px;
-}
-
-.login .connexion input {
-  width: 70%;
-  height: 15%;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  background-color: white;
-  box-shadow: 0px 0px 2px 1px rgba(109, 109, 109, 0.75) inset;
-  border: #6d6d6d;
-  text-align: center;
-}
-
-.login .connexion button {
-  width: 50%;
-  height: 20%;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  background-color: gray;
-  color: white;
-  border-radius: 10px;
-}
+  border: 7px double #929292; }
+  .login img {
+    width: auto;
+    height: 50%;
+    border: 4px solid #66CEDC;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 3px #16242F;
+    padding: 40px;
+    background-color: white; }
+  .login .connexion {
+    width: 40%;
+    height: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    flex-direction: column;
+    border: 4px solid #66CEDC;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 3px #16242F;
+    padding: 40px; }
+    .login .connexion input {
+      width: 70%;
+      height: 15%;
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      background-color: white;
+      box-shadow: 0px 0px 2px 1px rgba(109, 109, 109, 0.75) inset;
+      border: #6d6d6d;
+      text-align: center; }
+    .login .connexion button {
+      width: 50%;
+      height: 20%;
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      background-color: gray;
+      color: white;
+      border-radius: 10px; }
 
 footer {
   background-color: #16242F;
   width: 100%;
-  height: 5vh;
-}
+  height: 5vh; }
+
 /*# sourceMappingURL=main.css.map */
