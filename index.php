@@ -34,9 +34,7 @@
         $current_page = "login";
 
         if (isset($user) && !empty($user)) {
-            // session_name($user);
-            // session_start();
-            $_SESSION['user'] = $user;
+            login($user);
             $current_page = "quest1";
         }
     }

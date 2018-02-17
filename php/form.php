@@ -21,7 +21,7 @@
             $question_name = 'Question_'.$i;
             
             if( isset( $_POST[$question_name] )){ // Pour une question avec une réponse unique...
-                $user_answer[$i] = sanitize( $question_name );
+                $user_answer[ 'Question_'.($i + $id_question) ] = sanitize( $question_name );
             }
             else { // Pour une question avec réponse multiple...
                 for($j = 0; $j < 6; $j++){
@@ -29,13 +29,14 @@
                     $complete_name = $question_name.'-'.$option_name;
 
                     if( isset( $_POST[$complete_name] )){
-                        $user_answer[$i][] = sanitize( $complete_name );
+                        $user_answer[ 'Question_'.($i + $id_question) ][] = sanitize( $complete_name );
                     }
                 }
             }
         }
         if($debug){
             echo '<div class="debug left">';
+            echo '<h3>Réponses de l\'utilisateur : </h3>';
             var_dump($user_answer);
             echo '</div>';
         }

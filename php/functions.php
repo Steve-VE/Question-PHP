@@ -66,7 +66,18 @@ function sanitize($key){
 
 // FONCTION PROPRE AUX SESSIONS
 
+// Renvoit true si une section est active
 function session_active(){
     return (isset($_SESSION['user']) && $_SESSION != "");
+}
+
+// Fonction à appeler quand on soit que l'utilisateur ouvre sa session
+function login($username){
+    // session_name($user);
+    // session_start();
+    $_SESSION['user'] = $user;
+
+    // TODO : vérifier au préalable s'il existe déjà un score au nom de l'utilisateur. Si oui, le récupérer
+    $_SESSION['score'] = 0;
 }
 ?>
