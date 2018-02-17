@@ -23,7 +23,7 @@ echo '<p class="label">'. $statement .'</p>';
 
 echo '<div class="input">';
 // ... et on utilise une boucle pour parcourir le tableau et afficher une à une les différentes options.
-for($j = 0; $j < 6; $j++){
+for($j = 0; $j < count($options); $j++){
     $current_option = "Option_" . ($j + 1);
     // Si l'option actuelle correspond à l'une des bonnes réponses...
     if( in_array($options[$j], $good_answers)){
@@ -32,6 +32,9 @@ for($j = 0; $j < 6; $j++){
     }
     
     echo '<input type="checkbox" id="Question_'. $id_question .'" name="Question_'. $id_question . '-' . $current_option .'" value="'. $current_option .'"';
+    if(isset( $_POST[ 'Question_'.$id_question.'-'.$current_option ] )){
+        echo ' checked';
+    }
     echo '/>';
     echo '<label for="'. $current_option .'">';
     echo $options[$j];

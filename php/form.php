@@ -8,9 +8,14 @@
     //---------------------------------------------------- */
 
     $user_answer; // Array qui contiendra toutes les réponses données par l'utilisateur
-    if(isset($_POST['Question_0'])){ // Première série de questions
-        $score = 0;
-        // $id_question = 5;
+    if(isset($_POST['Question_0']) || isset($_POST['Question_5'])){ 
+        if( isset($_POST['Question_0']) ){// Première série de questions
+            $score = 0;
+        }
+        else if( isset($_POST['Question_5']) ){// Deuxième série de questions
+            $id_question = 5;
+            $score = $_SESSION['score'];
+        }
 
         for($i = 0; $i < 5; $i++ ){
             $question_name = 'Question_'.$i;
@@ -35,9 +40,6 @@
             echo '</div>';
         }
 
-    }
-    else if(isset($_POST['Question_5'])){ // Deuxième série de questions
-        // $id_question = 5;
     }
 
     echo '<form action="" method="post" class="formq">';

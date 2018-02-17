@@ -11,5 +11,5 @@ define_answer($answer);
     <label for="Question_3"> <?php echo $statement; ?> </label>
 </div>
 <div class="input">    
-    <input type="text" name="Question_3" id="Question_3"/>
+    <input type="text" name="Question_3" id="Question_3" value="<?php echo(get_value_for("Question_3")); ?>"/>
 </div>

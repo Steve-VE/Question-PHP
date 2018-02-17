@@ -27,7 +27,12 @@ for($j = 0; $j < count($options); $j++){
     }
     
     echo '<div class="a">';
-    echo '<input type="radio" id="Question_'. $id_question .'" name="Question_'. $id_question .'" value="'. $current_option .'"/>';
+    echo '<input type="radio" id="Question_'. $id_question .'" name="Question_'. $id_question .'" value="'. $current_option .'"';
+    if(isset( $_POST['Question_'.$id_question] )
+    && $_POST['Question_'.$id_question] == $current_option ){
+        echo ' checked';
+    }
+    echo '/>';
     echo '<label for="'. $current_option .'">';
     echo $options[$j];
     echo '</label>';

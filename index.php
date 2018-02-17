@@ -65,12 +65,12 @@
         <main>
             <?php
             if($debug){
-                echo '<div class="debug left">';
-                echo '<h3>Etat de la session :</h3>';
-                echo "Session active ? " . (session_active() ? 'true' : 'false') . '<br/>';
-                echo "Session status : " . session_status() .'<br/>';
-                echo "Page à afficher : " . $current_page;
-                echo '</div>';
+                // echo '<div class="debug left">';
+                // echo '<h3>Etat de la session :</h3>';
+                // echo "Session active ? " . (session_active() ? 'true' : 'false') . '<br/>';
+                // echo "Session status : " . session_status() .'<br/>';
+                // echo "Page à afficher : " . $current_page;
+                // echo '</div>';
 
                 echo '<div class="debug right">';
                 if(isset($_POST)){

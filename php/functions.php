@@ -45,7 +45,7 @@ function get_value_for($input_name){
     $result = "";
 
     if(isset($_POST[$input_name])){
-        $result = $_POST[$input_name];
+        $result = sanitize($input_name);
     }
 
     return $result;
