@@ -35,25 +35,3 @@ for($j = 0; $j < count($options); $j++){
 }
 echo '</div>';
 ?>
-
-<!-- <div class="label">
-    <p class="label">
-        <?php echo $statement; ?>
-    </p>
-</div>
-<div class="input">
-    <div class="a">
-        <input type="radio" name="Question_4" value="oui"/> 
-        <label> Oui</label>
-    </div>
-    <div class="a">
-        <input type="radio" name="Question_4"/> 
-        <label> Non</label>
-    </div>
-    <div class="a">
-        <input type="radio" name="Question_4"/> 
-        <label> Uniquement si le formulaire comporte aussi des input "text"</label>
-    </div>
-</div> -->
-
-

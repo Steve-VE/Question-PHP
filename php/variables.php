@@ -11,5 +11,7 @@ $variable_names = ["test", "ma_var", "var"];
 
 // Tableau qui contient une liste de mots de salutation
 $greetings = ["bonjour", "coucou", "hello", "salut"];
-
+// Tableau question_2.php
+$function_name = ["afficher", "imprimer", "lire", "apparaître"]
+$showed_var = ["texte", "paragraphe", "ligne", "phrase", "mots", "Frodon"]
 ?>
