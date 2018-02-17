@@ -7,7 +7,7 @@ main {
     justify-content: center;
     align-items: center;
 
-    .formq {
+    .formq { //formulaire question
         background-color: $color-form;
         height: 100%;
         width: 75%;
@@ -62,12 +62,14 @@ main {
                     align-items: center;
                     margin-left: -10px; 
                     padding-top: 3%;
+                    font-size: 90%;
 
                 }
 
                 .a {
                     width: 23%;
                     display: flex;
+                    font-size: 95%;
 
                      input {
                          align-self: center;

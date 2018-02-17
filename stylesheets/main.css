@@ -96,10 +96,12 @@ main {
           height: 100%;
           align-items: center;
           margin-left: -10px;
-          padding-top: 3%; }
+          padding-top: 3%;
+          font-size: 90%; }
         main .formq .question .input .a {
           width: 23%;
-          display: flex; }
+          display: flex;
+          font-size: 95%; }
           main .formq .question .input .a input {
             align-self: center; }
     main .formq #bouton {
