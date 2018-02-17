@@ -1,15 +1,15 @@
 <?php
 
-$rnd_name = get_random_value($variable_names);
-$rnd_line = get_random_value($greetings);
-
 $type = "text";
-$statement = "Utilisez une fonction en une ligne qui permet de mettre un mot en majuscule";
-$answer = $rnd_name . "='". $rnd_line ."';";
+$statement = "Quelle fonction permet de mettre un mot ou une phrase en majuscule ?";
+$answer = 'strtoupper';
+
+define_answer($answer);
 ?>
+
 <div class="label">
-    <label for="Question_4"> <?php echo $statement; ?> </label>
+    <label for="Question_3"> <?php echo $statement; ?> </label>
 </div>
 <div class="input">    
-    <input type="text" name="Question_4"/>
+    <input type="text" name="Question_3" id="Question_3"/>
 </div>

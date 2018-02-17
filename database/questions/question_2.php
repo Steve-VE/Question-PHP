@@ -7,20 +7,17 @@ $good_answer = "<pre>function afficher(\$texte){<br/>
                 print_r(\$texte);</br> 
                 }</pre>";
 
-// ... on définit les différentes options possible pour le QCM, en oubliant pas d'y inclure la bonne réponse ('$good_answer')...
-$options = [
-    $good_answer,
-
-    "<pre>function afficher(\$texte){<br/>
-    print_r(\$texte)</br>
-    }</pre>",
-
-    "<pre>function afficher(){<br/>
-    print_r(\$texte)</br>
-    }</pre>"
-];
-// ... on mélange le tableau contenant les options...
-shuffle($options);
+                $options = [
+                    $good_answer,
+                
+                    "<pre>function afficher(\$texte){<br/>
+                    print_r(\$texte)</br>
+                    }</pre>",
+                
+                    "<pre>function afficher(){<br/>
+                    print_r(\$texte)</br>
+                    }</pre>"
+                ];
 
 echo '<p class="label">'. $statement .'</p>';
 echo '<div class="input">';
@@ -35,7 +32,7 @@ for($j = 0; $j < count($options); $j++){
     }
     
     echo '<div class="side">';
-    echo '<input type="radio" id="Question_'. $id_question .'" name="'. $current_option .'" value="'. $current_option .'"/>';
+    echo '<input type="radio" id="Question_'. $id_question .'" name="Question_'. $id_question .'" value="'. $current_option .'"/>';
     echo '<label for="'. $current_option .'">';
     echo $options[$j];
     echo '</label>';

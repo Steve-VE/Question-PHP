@@ -31,7 +31,8 @@ for($j = 0; $j < 6; $j++){
         $good_options[] = $current_option;
     }
     
-    echo '<input type="checkbox" id="Question_'. $id_question .'" name="'. $current_option .'" value="'. $current_option .'"/>';
+    echo '<input type="checkbox" id="Question_'. $id_question .'" name="Question_'. $id_question . '-' . $current_option .'" value="'. $current_option .'"';
+    echo '/>';
     echo '<label for="'. $current_option .'">';
     echo $options[$j];
     echo '</label>';

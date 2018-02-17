@@ -14,7 +14,7 @@ function attribution($input) {
 function define_answer($answer){
     global $id_question;
     $answers[$id_question] = $answer;
-    $_SESSION['answers'][$id_question] =  $answers[$id_question];
+    $_SESSION['answers']['Question_'.$id_question] =  $answers[$id_question];
 }
 
 // Renvoit au hasard un élément pris dans un tableau
@@ -56,6 +56,10 @@ function get_value_for($input_name){
 function random($min, $max, $seed){
     srand($seed);
     return rand($min, $max);
+}
+
+function sanitize($key){
+    return $_POST[$key];
 }
 
 
