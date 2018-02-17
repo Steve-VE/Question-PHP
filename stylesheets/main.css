@@ -76,13 +76,16 @@ main {
         width: 70%;
         align-items: center;
         justify-content: center; }
+        main .formq .question .input label {
+          padding-right: 10px; }
         main .formq .question .input .side {
           width: 33%;
           display: flex;
           flex-direction: column;
           height: 100%;
           align-items: center;
-          margin-left: -10px; }
+          margin-left: -10px;
+          padding-top: 3%; }
         main .formq .question .input .a {
           width: 23%;
           display: flex; }
@@ -91,6 +94,7 @@ main {
     main .formq #bouton {
       display: flex;
       align-self: center;
+      justify-content: center;
       width: 20%; }
 
 .login {
