@@ -18,7 +18,7 @@ body {
   position: fixed;
   top: 0;
   padding: 12px;
-  background-color: white; }
+  background-color: rgba(255, 255, 255, 0.7); }
   .debug.left {
     left: 0; }
   .debug.right {
@@ -79,10 +79,15 @@ main {
         main .formq .question .input .side {
           width: 33%;
           display: flex;
-          flex-direction: column; }
+          flex-direction: column;
+          height: 100%;
+          align-items: center;
+          margin-left: -10px; }
         main .formq .question .input .a {
           width: 23%;
           display: flex; }
+          main .formq .question .input .a input {
+            align-self: center; }
     main .formq #bouton {
       display: flex;
       align-self: center;

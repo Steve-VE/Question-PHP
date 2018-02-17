@@ -4,19 +4,16 @@ $statement = "Quelle fonction est sans erreurs ?";
 
 // On stocke la bonne réponse dans la variable '$good_answer'...
 $good_answer = "<pre>function afficher(\$texte){<br/>
-                print_r(\$texte);</br> 
-                }</pre>";
+                print_r(\$texte);}</pre>";
 
                 $options = [
                     $good_answer,
                 
                     "<pre>function afficher(\$texte){<br/>
-                    print_r(\$texte)</br>
-                    }</pre>",
+                    print_r(\$texte)}</pre>",
                 
                     "<pre>function afficher(){<br/>
-                    print_r(\$texte)</br>
-                    }</pre>"
+                    print_r(\$texte)}</pre>"
                 ];
 
 echo '<p class="label">'. $statement .'</p>';
