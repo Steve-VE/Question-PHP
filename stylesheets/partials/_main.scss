@@ -50,6 +50,10 @@ main {
                 justify-content: center;
                 // margin-left: -3%;
 
+                label {
+                    padding-right: 10px;
+                }
+
                 .side {
                     width: 33%;
                     display: flex;
@@ -57,13 +61,14 @@ main {
                     height: 100%;
                     align-items: center;
                     margin-left: -10px; 
+                    padding-top: 3%;
 
                 }
 
                 .a {
                     width: 23%;
                     display: flex;
-                    
+
                      input {
                          align-self: center;
                      }
@@ -74,6 +79,7 @@ main {
         #bouton {
             display: flex;
             align-self: center;
+            justify-content: center;
             width: 20%;
         }
 
