@@ -11,7 +11,6 @@ body {
   background-color: #16242F;
   width: 100vw;
   height: 100vh;
-  display: flex;
   justify-content: center;
   margin: 0;
   font-family: 'Montserrat';
@@ -23,7 +22,8 @@ body {
 
 .page {
   width: 70%;
-  height: auto; }
+  height: auto;
+  margin: 0 auto; }
 
 .debug {
   position: fixed;
@@ -60,7 +60,7 @@ main {
     flex-direction: column;
     border: 3px solid black;
     border-radius: 15px;
-    box-shadow: 0px 0px 10px 10px black;
+    box-shadow: 0px 0px 10px 6px #0e0e0e;
     padding-top: 10px;
     padding-bottom: 10px; }
     main .formq .question {
