@@ -28,16 +28,42 @@ main {
             border-top: 3px solid $color-border2;
             border-bottom: 3px solid $color-border2;
             display: flex;
-            justify-content: space-around;
             text-align: center;
             align-items: center;
 
-            label {
+            .label {
+                display: flex;
                 float: left;
+                height: 100%;
+                width: 30%;
+                text-align: justify;
+                align-items: center;
+                margin-left: 3%
             }
 
-            input {
+            .input {
+                display: flex;
                 float: right;
+                height: 100%;
+                width: 70%;
+                align-items: center;
+                justify-content: center;
+                // margin-left: -3%;
+
+                .side {
+                    width: 33%;
+                    display: flex;
+                    flex-direction: column;
+
+                    pre {
+
+                    }
+                }
+
+                .a {
+                    width: 23%;
+                    display: flex;
+                }
             }
         }
         

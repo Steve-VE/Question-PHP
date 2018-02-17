@@ -22,8 +22,8 @@ $options = [
 // ... on mélange le tableau contenant les options...
 shuffle($options);
 
-echo '<p>'. $statement .'</p>';
-
+echo '<p class="label">'. $statement .'</p>';
+echo '<div class="input">';
 // ... et on utilise une boucle pour parcourir le tableau et afficher une à une les différentes options.
 for($j = 0; $j < count($options); $j++){
 
@@ -34,11 +34,12 @@ for($j = 0; $j < count($options); $j++){
         define_answer( $current_option );
     }
     
-    echo '<div class="item upside">';
+    echo '<div class="side">';
     echo '<input type="radio" id="Question_'. $id_question .'" name="'. $current_option .'" value="'. $current_option .'"/>';
     echo '<label for="'. $current_option .'">';
     echo $options[$j];
     echo '</label>';
     echo '</div>';
 }
+echo '</div>';
 ?>

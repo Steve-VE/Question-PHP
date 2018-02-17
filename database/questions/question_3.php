@@ -7,6 +7,9 @@ $type = "text";
 $statement = "Utilisez une fonction en une ligne qui permet de mettre un mot en majuscule";
 $answer = $rnd_name . "='". $rnd_line ."';";
 ?>
-
-<label for="Question 4"> <?php echo $statement; ?> </label>
-<input type="text" name="Question 4"/>
+<div class="label">
+    <label for="Question_4"> <?php echo $statement; ?> </label>
+</div>
+<div class="input">    
+    <input type="text" name="Question_4"/>
+</div>

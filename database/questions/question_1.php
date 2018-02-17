@@ -19,8 +19,9 @@ $good_options = array();
 // ... on mélange le tableau contenant les options...
 shuffle($options);
 
-echo '<p>'. $statement .'</p>';
+echo '<p class="label">'. $statement .'</p>';
 
+echo '<div class="input">';
 // ... et on utilise une boucle pour parcourir le tableau et afficher une à une les différentes options.
 for($j = 0; $j < 6; $j++){
     $current_option = "Option_" . ($j + 1);
@@ -35,6 +36,7 @@ for($j = 0; $j < 6; $j++){
     echo $options[$j];
     echo '</label>';
 }
+echo '</div>';
 // ... 
 define_answer( $good_options );
 ?>
