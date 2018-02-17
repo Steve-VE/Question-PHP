@@ -59,6 +59,7 @@ function random($min, $max, $seed){
 }
 
 function sanitize($key){
+    // TODO : vérifier si la clef existe dans le post, puis sanetiser et uniformiser la valeur, et enfin, renvoyer 'false' si il y a un soucis (la clef n'existe pas ou contient une valeur vide par exemple)
     return $_POST[$key];
 }
 
