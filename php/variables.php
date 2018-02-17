@@ -3,7 +3,7 @@
 // Dans ce fichier, uniquement les variables globales
 //---------------------------------------------------- */
 
-$debug = true; // 'true' pour afficher tout ce qui concerne le développement, 'false' pour le cacher
+$debug = false; // 'true' pour afficher tout ce qui concerne le développement, 'false' pour le cacher
 $id_question = 0; // Correspond au numéro de la question
 
 
