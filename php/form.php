@@ -24,7 +24,7 @@
                 $user_answer[ 'Question_'.($i + $id_question) ] = sanitize( $question_name );
             }
             else { // Pour une question avec réponse multiple...
-                for($j = 0; $j < 6; $j++){
+                for($j = 0; $j < 10; $j++){
                     $option_name = 'Option_'.$j;
                     $complete_name = $question_name.'-'.$option_name;
 
@@ -34,6 +34,11 @@
                 }
             }
         }
+
+        foreach($user_answer as $question => $answer){
+            
+        }
+
         if($debug){
             echo '<div class="debug left">';
             echo '<h3>Réponses de l\'utilisateur : </h3>';
