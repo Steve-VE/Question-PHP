@@ -10,5 +10,5 @@ Que va afficher :<br/><pre>echo \$value</pre> et <br/><pre>echo \$key</pre>";
 $answer = $rnd_name . "='". $rnd_line ."';";
 ?>
 
-<label for="Question 4"> <?php echo $statement; ?> </label>
+<label for="Question 7"> <?php echo $statement; ?> </label>
 <input type="text" name="Question_7"/>
