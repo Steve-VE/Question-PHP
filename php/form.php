@@ -45,7 +45,8 @@
             if(isset( $_SESSION['answers'][$question] )){
                 if( is_array($current_answer) ){ // Si la réponse est un array...
                     // ... on vérifie que la différence entre les deux tableaux de réponse renvoit un tableau dont la taille est de 0 (via les fonction 'array_diff' et 'count')
-                    if( count(array_diff($current_answer, $_SESSION['answers'][$question])) == 0 ){
+                    if( count(array_diff($current_answer, $_SESSION['answers'][$question])) == 0
+                    && count($current_answer) == count($_SESSION['answers'][$question]) ){
                         $score++;
                     }
                 }
