@@ -1,7 +1,7 @@
 <?php
 
     $score = 0;
-    $id_question = 0;
+    $id_question = 5;
 
     /* ----------------------------------------------------//
     // Récupération et traitements des réponses utilisateur
