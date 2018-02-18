@@ -75,7 +75,7 @@ function session_active(){
 function login($username){
     // session_name($user);
     // session_start();
-    $_SESSION['user'] = $user;
+    $_SESSION['user'] = $username;
 
     // TODO : vérifier au préalable s'il existe déjà un score au nom de l'utilisateur. Si oui, le récupérer
     $_SESSION['score'] = 0;

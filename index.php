@@ -62,6 +62,21 @@
         </header>
         <main>
             <?php
+            if($current_page == 'login'){
+                require "php/login.php";
+            }
+            else if($current_page == "result"){
+                require "php/result.php";
+            }
+            else{   
+                require "php/form.php";
+            }
+            ?>
+        </main>
+        <footer>
+            <?php
+            require "php/footer.php";
+
             if($debug){
                 // echo '<div class="debug left">';
                 // echo '<h3>Etat de la session :</h3>';
@@ -88,21 +103,6 @@
                 }
                 echo '</div>';
             }
-
-            if($current_page == 'login'){
-                require "php/login.php";
-            }
-            else if($current_page == "result"){
-                require "php/result.php";
-            }
-            else{   
-                require "php/form.php";
-            }
-            ?>
-        </main>
-        <footer>
-            <?php
-            require "php/footer.php";
             ?>
         </footer>
     </div>
