@@ -1,7 +1,7 @@
 <?php
     $dataURL = '../database/result.json';
     $scorearray = file_get_contents($dataURL);
-    $scoreresult = json_decode($scorearray);
+    $scoreresult = json_decode($scorearray, 'JSON_FORCE_ARRAY');
     // $datascore = array($scorearray);
     //scoreboard est un tableau concentrant les noms et les scores
     // $scoreboard = arsort($datascore);
@@ -10,5 +10,12 @@
     //     print_r($scoreboard[$i]);
     // };
     var_dump($scorearray);
-    var_dump($scoreresult);
+    $test =  array_values($scoreresult);
+    var_dump($test);
+
+
+
+
+
+
 ?>
