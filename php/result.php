@@ -1,4 +1,5 @@
 <?php
+
 $dataURL = '../database/result.json';
 $dataReceived = file_get_contents($dataURL);
 // $datafile =  [$_SESSION['user'], $_SESSION['score']];
