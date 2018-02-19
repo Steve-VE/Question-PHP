@@ -7,6 +7,51 @@ main {
     justify-content: center;
     align-items: center;
 
+    .result {
+        text-align: center;
+        width: 30%;
+        height: auto;
+        color: white;
+        font-size: 150%;
+
+        h6 {
+            font-size: 100%;
+            padding-bottom: 30px;
+        }
+        
+        .rouge {
+            font-size: 150%;
+            color: red;
+            font-weight: bold;
+        }
+
+        .orange {
+            font-size: 150%;
+            color: rgb(255, 102, 0);
+            font-weight: bold;
+        }
+
+        .vert {
+            font-size: 150%;
+            color: rgb(21, 255, 0);
+            font-weight: bold;
+        }
+
+        .gold {
+            font-size: 150%;
+            color: gold;
+            font-weight: bold;
+            border: 2px solid rgb(119, 90, 18);
+            padding: 20px;
+
+            img {
+                width: 30%;
+                padding-top: 30px;
+            }
+        }
+
+    }
+
     .formq { //formulaire question
         background-color: $color-form;
         height: 100%;

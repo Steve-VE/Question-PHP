@@ -51,6 +51,36 @@ main {
   display: flex;
   justify-content: center;
   align-items: center; }
+  main .result {
+    text-align: center;
+    width: 30%;
+    height: auto;
+    color: white;
+    font-size: 150%; }
+    main .result h6 {
+      font-size: 100%;
+      padding-bottom: 30px; }
+    main .result .rouge {
+      font-size: 150%;
+      color: red;
+      font-weight: bold; }
+    main .result .orange {
+      font-size: 150%;
+      color: #ff6600;
+      font-weight: bold; }
+    main .result .vert {
+      font-size: 150%;
+      color: #15ff00;
+      font-weight: bold; }
+    main .result .gold {
+      font-size: 150%;
+      color: gold;
+      font-weight: bold;
+      border: 2px solid #775a12;
+      padding: 20px; }
+      main .result .gold img {
+        width: 30%;
+        padding-top: 30px; }
   main .formq {
     background-color: #d6d6d6;
     height: 100%;
