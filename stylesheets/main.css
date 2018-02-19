@@ -88,7 +88,8 @@ main {
         align-items: center;
         justify-content: center; }
         main .formq .question .input label {
-          padding-right: 10px; }
+          padding-right: 10px;
+          padding-top: 10px; }
         main .formq .question .input .side {
           width: 33%;
           display: flex;
@@ -96,8 +97,9 @@ main {
           height: 100%;
           align-items: center;
           margin-left: -10px;
-          padding-top: 3%;
-          font-size: 90%; }
+          padding-top: 20px;
+          font-size: 70%;
+          text-align: left; }
         main .formq .question .input .a {
           width: 23%;
           display: flex;
