@@ -11,5 +11,5 @@ $options = [
     "<pre>&lt;?php echo '&lt;div class=exemple&gt;&lt;p&gt;ceci est un paragraphe&lt;/p&gt;&lt;/div&gt;' ></pre>",
 ];
 
-echo_question( $type, $statement, $good_answer, $options, "a" );
+echo_question( $type, $statement, $good_answer, $options, "c" );
 ?>

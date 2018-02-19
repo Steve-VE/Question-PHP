@@ -1,7 +1,7 @@
 <?php
 
     $score = 0;
-    $id_question = 5;
+    $id_question = 0;
     $current_page = "quizz";
 
     /* ----------------------------------------------------//
