@@ -7,18 +7,18 @@
     $user = attribution('utilisateur');
     $current_page = "";
     
-    // if(isset($_GET['debug'])){
-    //     $temp = $_GET['debug'];
-    //     if($temp == "quest1" || $temp == "quest2" || $temp == "result" || $temp == "login"){
-    //         $current_page = $temp;
-    //     }
-    //     else if($temp == "logout"){
-    //         if(session_active()){
-    //             session_destroy();
-    //         }
-    //         $current_page = "login";
-    //     }
-    // }
+    if(isset($_GET['debug'])){
+        $temp = $_GET['debug'];
+        if($temp == "result" || $temp == "login"){
+            $current_page = $temp;
+        }
+        else if($temp == "logout"){
+            if(session_active()){
+                session_destroy();
+            }
+            $current_page = "login";
+        }
+    }
 
     session_start();
     
@@ -35,11 +35,11 @@
 
         if (isset($user) && !empty($user)) {
             login($user);
-            $current_page = "quest1";
+            $current_page = "quizz";
         }
     }
     else{
-        $current_page = "quest1";
+        // $current_page = "quizz";
     }
 
     ?>

@@ -95,6 +95,27 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
         }
         echo '</div>';
     }
+    else if( $type == "select" ){ // Si la question a recourt à des inputs de type 'select'
+        $good_options = array();
+
+        echo '<p class="label">'. $statement .'</p>';
+        echo '<div class="input">';
+
+        for($j = 0; $j < count($options); $j++){
+            shuffle($options[$j]);
+
+            echo '<select name="Reponse_'. $j .'">';
+            for($k = 0; $k < count($options[$j]); $k++){
+                echo '<option value="">';
+                echo '</option>';
+            }
+            echo '</select>';
+        }
+
+        define_answer($good_options);
+
+        echo '</div>';
+    }
 
 }
 
