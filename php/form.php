@@ -1,7 +1,7 @@
 <?php
 
     $score = 0;
-    $id_question = 5;
+    $id_question = 0;
     $current_page = "quizz";
 
     /* ----------------------------------------------------//
@@ -12,11 +12,11 @@
     $user_answer; 
 
     // Condition qui permet de ne récupérer les réponses que si l'utilisateur a déjà répondu à l'une ou l'autre des questions
-    if(isset($_POST['Question_0']) || isset($_POST['Question_6'])){  
+    if(isset($_POST['Question_0']) || isset($_POST['Question_5'])){  
         if( isset($_POST['Question_0']) ){// Première série de questions
             $score = 0;
         }
-        else if( isset($_POST['Question_6']) ){// Deuxième série de questions
+        else if( isset($_POST['Question_5']) ){// Deuxième série de questions
             $id_question = 5;
             $score = $_SESSION['score'];
         }
@@ -35,6 +35,7 @@
 
                     if( isset( $_POST[$complete_name] )){
                         $user_answer[  $question_name ][] = sanitize( $complete_name );
+                        echo (sanitize( $complete_name ));
                     }
                 }
             }
@@ -81,7 +82,6 @@
             $current_page = "result";
         }
     }
-    echo $current_page;
 
     if($current_page == "quizz"){
 

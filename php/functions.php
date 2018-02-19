@@ -104,9 +104,13 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
         for($j = 0; $j < count($options); $j++){
             shuffle($options[$j]);
 
-            echo '<select name="Reponse_'. $j .'">';
+            echo '<select name="Question_'. $id_question .'-Option_'. $j .'">';
             for($k = 0; $k < count($options[$j]); $k++){
                 echo '<option value="Option_'.$k.'">';
+                echo $options[$j][$k];
+                if( in_array($options[$j][$k], $good_answer) ){
+                    $good_options[] = 'Option_'.$k;
+                }
                 echo '</option>';
             }
             echo '</select>';
