@@ -13,7 +13,7 @@ $answer = [
     'empty',
     'strlen'
 ];
-$rnd_index = random( 0, count($statement), seed() );
+$rnd_index = random( 0, count($statement) - 1, seed() );
 
 echo_question( $type, $statement[$rnd_index], $answer[$rnd_index] );
 ?>
