@@ -13,8 +13,17 @@ function attribution($input) {
 // Permet de définir une réponse à une question
 function define_answer($answer){
     global $id_question;
-    $answers[$id_question] = $answer;
-    $_SESSION['answers']['Question_'.$id_question] =  $answers[$id_question];
+    
+    if(is_array($answer)){
+        for($i=0; $i < count($answer);$i++){
+            $answers[$i] = normalize($answer[$i]);
+        }
+        $_SESSION['answers']['Question_'.$id_question] =  $answers;
+    }
+    else{
+        $answers[$id_question] = normalize($answer);
+        $_SESSION['answers']['Question_'.$id_question] =  $answers[$id_question];
+    }
 }
 
 
@@ -32,9 +41,9 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
     if($type == "text"){ // Si la question a recourt à un input de type 'text'
         define_answer( $good_answer );
 
-        echo '<label class="label" for="'. $current_question .'" >';
+        echo '<label class="label" for="'. $current_question .'" ><p>';
         echo $statement;
-        echo '</label>';
+        echo '</p></label>';
 
         echo '<div class="input">';
         echo '<input type="text" name="'. $current_question .'"';
@@ -46,9 +55,11 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
         $good_options = array();
 
         echo '<p class="label">'. $statement .'</p>';
-        echo '<div class="input">';
+        
 
+        echo '<div class="input">';
         for($j = 0; $j < count($options); $j++){
+            echo '<div class="item">';
             $current_option = "Option_" . ($j + 1);
 
             // Si l'option actuelle correspond à l'une des bonnes réponses...
@@ -65,6 +76,7 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
             echo '<label for="'. $current_option .'">';
             echo $options[$j];
             echo '</label>';
+            echo '</div>';
         }
         echo '</div>';
         define_answer( $good_options );
@@ -99,8 +111,8 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
     else if( $type == "select" ){ // Si la question a recourt à des inputs de type 'select'
         $good_options = array();
 
-        echo '<p class="label">'. $statement .'</p>';
-        echo '<div class="input">';
+        echo '<div class="label"><p>'. $statement .'</p></div>';
+        echo '<div class="input '. $css_class .'">';
 
         for($j = 0; $j < count($options); $j++){
             srand(seed());
@@ -147,14 +159,21 @@ function get_random_value($value){
 
 // Renvoit une valeur "standardisé" afin de comparer plus efficacement les réponses données par l'utilisateur et la réponse attendue
 function normalize($string, $brutal = false){
+    if(is_array($string)){
+        return $string;
+    }
+
     $string = str_replace(" ", "", $string);
     $string = str_replace('"', "'", $string);
+    $string = str_replace("&#34;", "&#39;", $string);
 
     if($brutal){
         $string = str_replace('(', "", $string);
         $string = str_replace(')', "", $string);
         // $string = str_replace(';', "", $string);
     }
+
+    $string = filter_var($string, FILTER_SANITIZE_STRING);
 
     return $string;
 }
@@ -192,10 +211,28 @@ function random($min, $max, $seed){
     return rand($min, $max);
 }
 
-function sanitize($key){
-    $propre = filter_var($_POST[$key], FILTER_SANITIZE_STRING);
-    // TODO : vérifier si la clef existe dans le post, puis sanetiser et uniformiser la valeur, et enfin, renvoyer 'false' si il y a un soucis (la clef n'existe pas ou contient une valeur vide par exemple)
-    return $propre;
+function sanitize($key, $filter=FILTER_SANITIZE_STRING){
+    $sanitized_variable = null;
+    if(isset($_POST[$key])){
+
+        $sanitized_variable = filter_var($_POST[$key], $filter);
+    }
+    return $sanitized_variable;
+}
+
+
+// Sauvegarde le score dans un fichier JSON
+function save_score($user, $score){
+    $dataURL = 'database/result.json';
+    $dataReceived = file_get_contents($dataURL);
+    
+
+    $log = json_decode($dataReceived, 'JSON_FORCE_ARRAY');
+    // $log[] = array($user => $score);
+    $log[$user] = $score;
+    $globalResult = json_encode($log, JSON_FORCE_OBJECT);
+
+    file_put_contents($dataURL, $globalResult);
 }
 
 

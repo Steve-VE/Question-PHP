@@ -7,16 +7,19 @@ $statement = "Quelle fonction est sans erreurs ?";
 
 // On stocke la bonne réponse dans la variable '$good_answer'...
 $good_answer = "<pre>function ". $rnd_function_name ."(\$". $rnd_name ."){
-                print_r(\$". $rnd_name .");<br/>}</pre>";
+    print_r(\$". $rnd_name .");<br/>
+}</pre>";
 
 $options = [
     $good_answer,
                 
     "<pre>function ". $rnd_function_name ."(\$". $rnd_name ."){
-    print_r(\$". $rnd_name .")<br/>}</pre>",
+    print_r(\$". $rnd_name .")<br/>
+}</pre>",
                 
     "<pre>function ". $rnd_function_name ."(){
-    print_r(\$". $rnd_name .")<br/>}</pre>"
+    print_r(\$". $rnd_name .")<br/>
+}</pre>"
 ];
 echo_question( $type, $statement, $good_answer, $options, "side" );
 ?>

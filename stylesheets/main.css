@@ -7,7 +7,9 @@
   src: url("../assets/fonts/montserrat-v12-latin-regular.eot");
   /* IE9 Compat Modes */
   src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../assets/fonts/montserrat-v12-latin-regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/montserrat-v12-latin-regular.woff2") format("woff2"), url("../assets/fonts/montserrat-v12-latin-regular.woff") format("woff"), url("../assets/fonts/montserrat-v12-latin-regular.ttf") format("truetype"), url("../assets/fonts/montserrat-v12-latin-regular.svg#Montserrat") format("svg");
-  /* Legacy iOS */ }
+  /* Legacy iOS */
+}
+
 body {
   background-color: #16242F;
   width: 100vw;
@@ -15,35 +17,46 @@ body {
   justify-content: center;
   margin: 0;
   font-family: 'Montserrat';
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 .page {
   width: 70%;
   height: auto;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .debug {
   position: fixed;
   top: 0;
   padding: 12px;
-  background-color: rgba(255, 255, 255, 0.7); }
-  .debug.left {
-    left: 0; }
-  .debug.right {
-    right: 0; }
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.debug.left {
+  left: 0;
+}
+
+.debug.right {
+  right: 0;
+}
 
 header {
   background-color: #16242F;
   height: 20vh;
   display: flex;
-  justify-content: center; }
-  header img {
-    width: auto;
-    height: 20vh; }
+  justify-content: center;
+}
+
+header img {
+  width: auto;
+  height: 20vh;
+}
 
 main {
   background-color: #16242F;
@@ -51,100 +64,155 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; }
-  main .result {
-    text-align: center;
-    width: 30%;
-    height: auto;
-    color: white;
-    font-size: 150%; }
-    main .result h6 {
-      font-size: 100%;
-      padding-bottom: 30px; }
-    main .result .rouge {
-      font-size: 150%;
-      color: red;
-      font-weight: bold; }
-    main .result .orange {
-      font-size: 150%;
-      color: #ff6600;
-      font-weight: bold; }
-    main .result .vert {
-      font-size: 150%;
-      color: #15ff00;
-      font-weight: bold; }
-    main .result .gold {
-      font-size: 150%;
-      color: gold;
-      font-weight: bold;
-      border: 2px solid #775a12;
-      padding: 20px; }
-      main .result .gold img {
-        width: 30%;
-        padding-top: 30px; }
-  main .formq {
-    background-color: #d6d6d6;
-    height: 100%;
-    width: 75%;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    border: 3px solid black;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px 6px #0e0e0e;
-    padding-top: 10px;
-    padding-bottom: 10px; }
-    main .formq .question {
-      height: 15%;
-      width: 100%;
-      background-color: #949494;
-      border-top: 3px solid #66CEDC;
-      border-bottom: 3px solid #66CEDC;
-      display: flex;
-      text-align: center;
-      align-items: center; }
-      main .formq .question .label {
-        display: flex;
-        float: left;
-        height: 100%;
-        width: 30%;
-        text-align: justify;
-        align-items: center;
-        margin-left: 3%; }
-      main .formq .question .input {
-        display: flex;
-        float: right;
-        height: 100%;
-        width: 70%;
-        align-items: center;
-        justify-content: center; }
-        main .formq .question .input label {
-          padding-right: 10px;
-          padding-top: 10px; }
-        main .formq .question .input .side {
-          width: 33%;
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-          align-items: center;
-          margin-left: -10px;
-          padding-top: 20px;
-          font-size: 70%;
-          text-align: left; }
-        main .formq .question .input .a {
-          width: 23%;
-          display: flex;
-          font-size: 95%; }
-          main .formq .question .input .a input {
-            align-self: center; }
-        main .formq .question .input .b {
-          display: flex;
-          align-items: center; }
-    main .formq #bouton {
-      display: flex;
-      align-self: center;
-      justify-content: center;
-      width: 20%; }
+  align-items: center;
+}
+
+main .result {
+  text-align: center;
+  width: 30%;
+  height: auto;
+  color: white;
+  font-size: 150%;
+}
+
+main .result h6 {
+  font-size: 100%;
+  padding-bottom: 30px;
+}
+
+main .result .rouge {
+  font-size: 150%;
+  color: red;
+  font-weight: bold;
+}
+
+main .result .orange {
+  font-size: 150%;
+  color: #ff6600;
+  font-weight: bold;
+}
+
+main .result .vert {
+  font-size: 150%;
+  color: #15ff00;
+  font-weight: bold;
+}
+
+main .result .gold {
+  font-size: 150%;
+  color: gold;
+  font-weight: bold;
+  border: 2px solid #775a12;
+  padding: 20px;
+}
+
+main .result .gold img {
+  width: 30%;
+  padding-top: 30px;
+}
+
+main .formq {
+  background-color: #d6d6d6;
+  height: 100%;
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  border: 3px solid black;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 6px #0e0e0e;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+main .formq .question {
+  height: 15%;
+  width: 100%;
+  background-color: #949494;
+  border-top: 3px solid #66CEDC;
+  border-bottom: 3px solid #66CEDC;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+main .formq .question .label {
+  display: flex;
+  height: 100%;
+  width: 30%;
+  text-align: justify;
+  align-items: center;
+  margin-left: 3%;
+}
+
+main .formq .question .code {
+  color: brown;
+  display: inline;
+}
+
+main .formq .question .input {
+  display: flex;
+  height: 100%;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main .formq .question .input .item {
+  width: 20%;
+  padding-left: 40px;
+  text-align: left;
+}
+
+main .formq .question .input label {
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+main .formq .question .input .side {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: -10px;
+  padding-top: 20px;
+  text-align: left;
+}
+
+main .formq .question .input .a {
+  width: 23%;
+  display: flex;
+  font-size: 95%;
+}
+
+main .formq .question .input .a input {
+  align-self: center;
+}
+
+main .formq .question .input .b {
+  display: flex;
+  align-items: center;
+}
+
+main .formq .question .line {
+  display: block;
+  padding: 12px;
+  text-align: left;
+}
+
+main .formq .question .line select {
+  max-width: 75%;
+  margin-top: 20px;
+}
+
+main .formq #bouton {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 20%;
+}
 
 .login {
   background-color: #e6e6e6;
@@ -156,51 +224,61 @@ main {
   padding-right: 50px;
   padding-left: 50px;
   border-radius: 120px 120px 0px 0px;
-  border: 7px double #929292; }
-  .login img {
-    width: auto;
-    height: 50%;
-    border: 4px solid #66CEDC;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px 3px #16242F;
-    padding: 40px;
-    background-color: white; }
-  .login .connexion {
-    width: 40%;
-    height: 50%;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-    flex-direction: column;
-    border: 4px solid #66CEDC;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px 3px #16242F;
-    padding: 40px; }
-    .login .connexion input {
-      width: 70%;
-      height: 15%;
-      display: flex;
-      align-self: center;
-      justify-content: center;
-      background-color: white;
-      box-shadow: 0px 0px 2px 1px rgba(109, 109, 109, 0.75) inset;
-      border: #6d6d6d;
-      text-align: center; }
-    .login .connexion button {
-      width: 50%;
-      height: 20%;
-      display: flex;
-      align-self: center;
-      justify-content: center;
-      background-color: gray;
-      color: white;
-      border-radius: 10px; }
+  border: 7px double #929292;
+}
+
+.login img {
+  width: auto;
+  height: 50%;
+  border: 4px solid #66CEDC;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 3px #16242F;
+  padding: 40px;
+  background-color: white;
+}
+
+.login .connexion {
+  width: 40%;
+  height: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  flex-direction: column;
+  border: 4px solid #66CEDC;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px 3px #16242F;
+  padding: 40px;
+}
+
+.login .connexion input {
+  width: 70%;
+  height: 15%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 0px 2px 1px rgba(109, 109, 109, 0.75) inset;
+  border: #6d6d6d;
+  text-align: center;
+}
+
+.login .connexion button {
+  width: 50%;
+  height: 20%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background-color: gray;
+  color: white;
+  border-radius: 10px;
+}
 
 footer {
   background-color: #16242F;
   width: 100%;
-  height: 5vh; }
+  height: 5vh;
+}
 
 .scoreboard {
   display: flex;
@@ -208,41 +286,55 @@ footer {
   text-align: center;
   color: white;
   flex-direction: column;
-  line-height: 100px; }
-  .scoreboard h1:after {
-    content: "Première place.";
-    background-color: #FFBA10;
-    border-color: black;
-    border-style: dotted;
-    margin-left: 50px;
-    padding: 15px; }
-  .scoreboard h2:after {
-    content: "Deuxieme place.";
-    background-color: silver;
-    border-color: black;
-    border-style: dotted;
-    margin-left: 50px;
-    padding: 15px; }
-  .scoreboard h3:after {
-    content: "Troisieme place.";
-    background-color: #794222;
-    border-color: black;
-    border-style: dotted;
-    margin-left: 50px;
-    padding: 15px; }
-  .scoreboard h4:after {
-    content: "Quatrieme place";
-    border-color: black;
-    border-style: dotted;
-    margin-left: 50px;
-    padding: 15px; }
-  .scoreboard h5:after {
-    content: "Cinquieme place";
-    border-color: black;
-    border-style: dotted;
-    margin-left: 50px;
-    padding: 15px; }
-  .scoreboard h6:after {
-    content: "→"; }
+  line-height: 100px;
+}
 
+.scoreboard h1:after {
+  content: "Première place.";
+  background-color: #FFBA10;
+  border-color: black;
+  border-style: dotted;
+  margin-left: 50px;
+  padding: 15px;
+}
+
+.scoreboard h2:after {
+  content: "Deuxieme place.";
+  background-color: silver;
+  border-color: black;
+  border-style: dotted;
+  margin-left: 50px;
+  padding: 15px;
+}
+
+.scoreboard h3:after {
+  content: "Troisieme place.";
+  background-color: #794222;
+  border-color: black;
+  border-style: dotted;
+  margin-left: 50px;
+  padding: 15px;
+}
+
+.scoreboard h4:after {
+  content: "Quatrieme place";
+  background-color: none;
+  border-color: black;
+  border-style: dotted;
+  margin-left: 50px;
+  padding: 15px;
+}
+
+.scoreboard h5:after {
+  content: "Cinquieme place";
+  background-color: none;
+  border-color: black;
+  border-style: dotted;
+  margin-left: 50px;
+  padding: 15px;
+}
+
+.scoreboard h6:after {
+  content: "→";
+}
 /*# sourceMappingURL=main.css.map */

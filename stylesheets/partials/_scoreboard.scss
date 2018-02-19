@@ -1,3 +1,11 @@
+@mixin score-stamp($color){
+    background-color: $color;
+    border-color: black;
+    border-style: dotted;
+    margin-left: 50px;
+    padding: 15px;
+}
+
 .scoreboard {
     display: flex;
     justify-content: space-around;
@@ -8,53 +16,31 @@
 
     h1:after {
         content: "Première place.";
-        background-color: #FFBA10;
-        border-color: black;
-        border-style: dotted;
-        margin-left: 50px;
-        padding: 15px;
+        @include score-stamp(#FFBA10);
     }
 
     h2:after {
         content: "Deuxieme place.";
-        background-color: silver;
-        border-color: black;
-        border-style: dotted;
-        margin-left: 50px;
-        padding: 15px;
+        @include score-stamp(silver);
         
     }
 
     h3:after {
         content: "Troisieme place.";
-        background-color: rgb(121, 66, 34);
-        border-color: black;
-        border-style: dotted;
-        margin-left: 50px;
-        padding: 15px;
+        @include score-stamp(rgb(121, 66, 34));
     }
 
     h4:after {
         content: "Quatrieme place";
-        border-color: black;
-        border-style: dotted;
-        margin-left: 50px;
-        padding: 15px;
+        @include score-stamp(none);
     }
 
     h5:after {
         content: "Cinquieme place";
-        border-color: black;
-        border-style: dotted;
-        margin-left: 50px;
-        padding: 15px;
+        @include score-stamp(none);
     }
 
     h6:after {
     content: "→";
     }
 }
-
-
-
-

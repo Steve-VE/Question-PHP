@@ -17,6 +17,7 @@
             $score = 0;
         }
         else if( isset($_POST['Question_5']) ){// Deuxième série de questions
+            // $score = 0;
             $id_question = 5;
             $score = $_SESSION['score'];
         }
@@ -81,6 +82,10 @@
         }
         else if($id_question==5){
             $current_page = "result";
+            if($_SESSION['answers'] != null){
+                save_score( $_SESSION['user'], $_SESSION['score'] );
+                $_SESSION['answers'] = null;
+            }
         }
     }
 
