@@ -3,7 +3,7 @@
     require "php/variables.php";
     // On charge les fonctions
     require "php/functions.php";
-    
+
     $user = attribution('utilisateur');
     $current_page = "";
     
