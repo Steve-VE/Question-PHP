@@ -43,7 +43,7 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
     }
     else if($type == "checkbox"){ // Si la question a recourt à des inputs de type 'checkbox'
         $good_options = array();
-        
+
         echo '<p class="label">'. $statement .'</p>';
         echo '<div class="input">';
 
@@ -80,7 +80,7 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
                 // ... on indique que cette option est la bonne réponse via la fonction 'define_answer'
                 define_answer( $current_option );
             }
-            
+
             echo '<div class="'. $css_class .'">';
             echo '<input type="radio" id="Question_'. $id_question .'" name="Question_'. $id_question .'" value="'. $current_option .'"';
             if(isset( $_POST['Question_'.$id_question] )
@@ -184,8 +184,9 @@ function random($min, $max, $seed){
 }
 
 function sanitize($key){
+    $propre = filter_var($_POST[$key], FILTER_SANITIZE_STRING);
     // TODO : vérifier si la clef existe dans le post, puis sanetiser et uniformiser la valeur, et enfin, renvoyer 'false' si il y a un soucis (la clef n'existe pas ou contient une valeur vide par exemple)
-    return $_POST[$key];
+    return $propre;
 }
 
 
