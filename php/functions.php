@@ -82,9 +82,9 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
         define_answer( $good_options );
     }
     else if( $type == "radio" ){ // Si la question a recourt à des inputs de type 'radio'
-        echo '<p class="label">'. $statement .'</p>';
+        echo '<div class="label"><p>'. $statement .'</p>';
+        echo '</div>';
         echo '<div class="input">';
-
         for($j = 0; $j < count($options); $j++){
 
             $current_option = "Option_" . ($j + 1);

@@ -6,20 +6,20 @@ $type = "radio";
 $statement = "Quelle fonction est sans erreurs ?";
 
 // On stocke la bonne réponse dans la variable '$good_answer'...
-$good_answer = "<pre>function ". $rnd_function_name ."(\$". $rnd_name ."){
-    print_r(\$". $rnd_name .");<br/>
-}</pre>";
+$good_answer = "<br/><span class='code'>function ". $rnd_function_name ."(\$". $rnd_name ."){<br/>
+    &nbsp;&nbsp;&nbsp;print_r(\$". $rnd_name .");
+}</span>";
 
 $options = [
     $good_answer,
                 
-    "<pre>function ". $rnd_function_name ."(\$". $rnd_name ."){
-    print_r(\$". $rnd_name .")<br/>
-}</pre>",
+    "<br/><span class='code'>function ". $rnd_function_name ."(\$". $rnd_name ."){<br/>
+        &nbsp;&nbsp;&nbsp;print_r(\$". $rnd_name .")
+}</span>",
                 
-    "<pre>function ". $rnd_function_name ."(){
-    print_r(\$". $rnd_name .")<br/>
-}</pre>"
+    "<br/><span class='code'>function ". $rnd_function_name ."(){<br/>
+        &nbsp;&nbsp;&nbsp;print_r(\$". $rnd_name .")
+}</span>"
 ];
 echo_question( $type, $statement, $good_answer, $options, "side" );
 ?>
