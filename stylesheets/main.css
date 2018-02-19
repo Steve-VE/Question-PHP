@@ -106,6 +106,9 @@ main {
           font-size: 95%; }
           main .formq .question .input .a input {
             align-self: center; }
+        main .formq .question .input .b {
+          display: flex;
+          align-items: center; }
     main .formq #bouton {
       display: flex;
       align-self: center;
