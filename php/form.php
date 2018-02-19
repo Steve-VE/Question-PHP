@@ -1,7 +1,7 @@
 <?php
 
     $score = 0;
-    $id_question = 0;
+    $id_question = 5;
 
     /* ----------------------------------------------------//
     // Récupération et traitements des réponses utilisateur
@@ -25,7 +25,7 @@
             $question_name = 'Question_'.($i+ $id_question);
             
             if( isset( $_POST[$question_name] )){ // Pour une question avec une réponse unique...
-                $user_answer[  $question_name ] = sanitize( $question_name );
+                $user_answer[  $question_name ] = normalize(sanitize( $question_name), true );
             }
             else { // Pour une question avec réponse multiple...
                 for($j = 0; $j < 10; $j++){

@@ -24,7 +24,7 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
     $current_question = "Question_".$id_question;
 
     // Si options est un tableau d'options...
-    if( is_array($options) ){
+        if( is_array($options) ){
         shuffle($options); // ... on les mélange afin que deux utilisateurs différents n'aient pas forcément le même ordre
     }
 
@@ -111,6 +111,21 @@ function get_random_value($value){
 }
 
 
+// Renvoit une valeur "standardisé" afin de comparer plus efficacement les réponses données par l'utilisateur et la réponse attendue
+function normalize($string, $brutal = false){
+    $string = str_replace(" ", "", $string);
+    $string = str_replace('"', "'", $string);
+
+    if($brutal){
+        $string = str_replace('(', "", $string);
+        $string = str_replace(')', "", $string);
+        // $string = str_replace(';', "", $string);
+    }
+
+    return $string;
+}
+
+
 // Renvoit un seed (utile pour la fonction random) qui dépend du nom de l'utilisateur
 function seed(){
     $seed_string = "default";
@@ -130,7 +145,7 @@ function get_value_for($input_name){
     $result = "";
 
     if(isset($_POST[$input_name])){
-        $result = sanitize($input_name);
+        $result = normalize(sanitize($input_name));
     }
 
     return $result;
