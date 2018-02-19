@@ -39,7 +39,7 @@
         }
     }
     else{
-        // $current_page = "quizz";
+        $current_page = "quizz";
     }
 
     ?>
