@@ -8,7 +8,7 @@ $log[] = $datafile;
 $globalResult = json_encode($log, JSON_FORCE_OBJECT);
 file_put_contents($dataURL, $globalResult);
 
-$_SESSION['score'] = 20;
+$_SESSION['score']; 
 
 echo "<div class='result'><h6>Votre score est de"." ".$_SESSION['score']."</h6>";
 

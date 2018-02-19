@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* montserrat-regular - latin */
 @font-face {
   font-family: 'Montserrat';
@@ -200,5 +201,48 @@ footer {
   background-color: #16242F;
   width: 100%;
   height: 5vh; }
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: white;
+  flex-direction: column;
+  line-height: 100px; }
+  .scoreboard h1:after {
+    content: "Première place.";
+    background-color: #FFBA10;
+    border-color: black;
+    border-style: dotted;
+    margin-left: 50px;
+    padding: 15px; }
+  .scoreboard h2:after {
+    content: "Deuxieme place.";
+    background-color: silver;
+    border-color: black;
+    border-style: dotted;
+    margin-left: 50px;
+    padding: 15px; }
+  .scoreboard h3:after {
+    content: "Troisieme place.";
+    background-color: #794222;
+    border-color: black;
+    border-style: dotted;
+    margin-left: 50px;
+    padding: 15px; }
+  .scoreboard h4:after {
+    content: "Quatrieme place";
+    border-color: black;
+    border-style: dotted;
+    margin-left: 50px;
+    padding: 15px; }
+  .scoreboard h5:after {
+    content: "Cinquieme place";
+    border-color: black;
+    border-style: dotted;
+    margin-left: 50px;
+    padding: 15px; }
+  .scoreboard h6:after {
+    content: "→"; }
 
 /*# sourceMappingURL=main.css.map */

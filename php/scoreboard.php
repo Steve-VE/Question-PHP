@@ -10,18 +10,36 @@
     }
     asort($board);
     $board = array_reverse($board);
-    $i = 5;
-    foreach ($board as $nom => $score) {
-        echo $nom." ";
-        echo $score."<br/>";
-        $i--;
-        if ($i == 0) {
-            break;
-        }
-    }
+    
 
 
 
 
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../stylesheets/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="scoreboard">
+        <?php
+            $i = 5;
+            foreach ($board as $nom => $score) {
+                echo "<h".(6 - $i).">";
+                echo $nom." ";
+                echo $score."</h".(6 - $i).">";
+                $i--;
+                if ($i == 0) {
+                    break;
+                }
+            }
+        ?>
+    </div>
+</body>
+</html>
