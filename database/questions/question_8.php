@@ -12,5 +12,5 @@ $options = [
     "Vérifier si la variable est vide ou est égale à 0"
 ];
 
-echo_question( $type, $statement, $good_answer, $options, "a" );
+echo_question( $type, $statement, $good_answer, $options, "b" );
 ?>

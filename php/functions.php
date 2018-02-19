@@ -106,7 +106,11 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
 
             echo '<select name="Reponse_'. $j .'">';
             for($k = 0; $k < count($options[$j]); $k++){
-                echo '<option value="">';
+                echo '<option value="Option_'.$k.'">';
+                echo $options[$j][$k];
+                if(true){
+
+                }
                 echo '</option>';
             }
             echo '</select>';
