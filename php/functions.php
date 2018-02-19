@@ -24,7 +24,8 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
     $current_question = "Question_".$id_question;
 
     // Si options est un tableau d'options...
-        if( is_array($options) ){
+    if( is_array($options) && $type != "select" ){
+        // srand(seed());
         shuffle($options); // ... on les mélange afin que deux utilisateurs différents n'aient pas forcément le même ordre
     }
 
@@ -102,15 +103,23 @@ function echo_question( $type, $statement, $good_answer, $options = null, $css_c
         echo '<div class="input">';
 
         for($j = 0; $j < count($options); $j++){
+            srand(seed());
             shuffle($options[$j]);
 
             echo '<select name="Question_'. $id_question .'-Option_'. $j .'">';
             for($k = 0; $k < count($options[$j]); $k++){
-                echo '<option value="Option_'.$k.'">';
+                echo '<option value="Option_'.$k.'"';
+                if(isset( $_POST[ 'Question_'.$id_question.'-Option_'.$j ] ) 
+                && $_POST[ 'Question_'.$id_question.'-Option_'.$j ] == "Option_".$k ){
+                    echo ' selected="selected"';
+                }
+                echo '>';
                 echo $options[$j][$k];
+
                 if( in_array($options[$j][$k], $good_answer) ){
                     $good_options[] = 'Option_'.$k;
                 }
+
                 echo '</option>';
             }
             echo '</select>';

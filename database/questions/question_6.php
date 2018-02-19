@@ -11,14 +11,14 @@ $answer = [
 
 $options = [[
     $answer[0],
-    "echo \$key\" va afficher la valeur contenue dans un élément du tableau \$things",
-    "echo \$key\" va afficher le texte \"key\"",
-    "echo \$key\" va afficher la valeur contenue dans \$value",
+    "\"echo \$key\" va afficher la valeur contenue dans un élément du tableau \$things",
+    "\"echo \$key\" va afficher le texte \"key\"",
+    "\"echo \$key\" va afficher la valeur contenue dans \$value",
 ], [
     $answer[1],
     "\"echo \$value\" va afficher la clé d'un élément du tableau \$things",
     "\"echo \$value\" va afficher le texte \"value\"",
-    "\"echo \$value\" va afficher la valeur contenue dans\$key"
+    "\"echo \$value\" va afficher la valeur contenue dans \$key"
 ]];
 
 echo_question( $type, $statement, $answer, $options );

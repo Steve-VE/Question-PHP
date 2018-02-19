@@ -35,7 +35,6 @@
 
                     if( isset( $_POST[$complete_name] )){
                         $user_answer[  $question_name ][] = sanitize( $complete_name );
-                        echo (sanitize( $complete_name ));
                     }
                 }
             }
@@ -62,7 +61,9 @@
             }
         }
         // On enregistre le score dans la session
-        $_SESSION['score'] = $score;
+        if(isset($user_answer) && count($user_answer)==5 ){
+            $_SESSION['score'] = $score;
+        }
 
         if($debug){
             echo '<div class="debug left">';
