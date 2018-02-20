@@ -1,0 +1,169 @@
+@mixin input-style(){
+    padding: 4px;
+    // border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+@mixin big-size(){
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+
+.formq { //formulaire question
+    background-color: $color-form;
+    height: 100%;
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 3px solid $color-border1;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 6px rgb(14, 14, 14);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+
+    .question {
+        height: 16%;
+        width: 100%;
+        background-color: $color-question;
+        border-top: 3px solid $color-border2;
+        border-bottom: 3px solid $color-border2;
+        display: flex;
+        // text-align: left;
+        align-items: center;
+
+        .label {
+            display: flex;
+            height: 100%;
+            width: 30%;
+            text-align: justify;
+            align-items: center;
+            margin-left: 3%
+
+        }
+
+        .code{
+            color: indigo;
+            display: inline;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        .input {
+            display: flex;
+            height: 100%;
+            width: 70%;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .item{
+                @include input-style;
+                width: 20%;
+                height: 20%;
+                margin-left: 32px;
+                padding-top: 12px;
+
+                input[type=checkbox]{
+                    @include big-size;
+                    margin: 0 12px;
+                    float: left;
+                    border: 2px solid red;
+                }
+            }
+
+            label {
+                padding-right: 10px;
+                padding-top: 10px;
+            }
+
+            .side {
+                @include input-style;
+                width: 25%;
+                height: 70%;
+                margin-right: 12px;
+                padding: 12px;
+
+                span{
+                    display: block;
+                    margin-top: 12px;
+                }
+            }
+
+            .a {
+                @include input-style;
+                width: 23%;
+                display: flex;
+                font-size: 95%;
+
+                input {
+                     align-self: center;
+                }
+            }
+
+            .b {
+                @include input-style;
+                width: 80%;
+
+                input{
+                    margin-right: 12px;
+                }
+                .label{
+                    margin-left: 12px;
+                }
+            }
+
+            input[type=radio]{
+                float: left;
+                @include big-size;
+                margin-left: 4px;
+
+                background-color: white;
+            }
+
+        }
+        .line{
+            width: 80%;
+            height: 80%;;
+            padding: 12px;
+            text-align: left;
+            flex-direction: column;
+            justify-content: space-around;
+
+            select{
+                @include input-style;
+                width: 100%;
+                max-width: 75%;
+                background-color: white;
+            }
+        }
+        input[type=text]{
+            @include input-style;
+            background-color: white;
+        }
+    }
+    
+    #bouton {
+        @include input-style;
+        width: 20%;
+        padding: 12px;
+
+        display: flex;
+        align-self: center;
+        justify-content: center;
+
+        background-color: $color-question;
+        border: none;
+        box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.5) inset,
+                    1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    }
+}

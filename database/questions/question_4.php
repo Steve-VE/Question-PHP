@@ -6,8 +6,8 @@ $good_answer = "Oui";
 $options = [
     $good_answer,
     "Non",
-    "Uniquement si le formulaire comporte aussi des inputs de type \"text\""
+    "Uniquement si le formulaire comporte des inputs de type \"text\""
 ];
 
-echo_question( $type, $statement, $good_answer, $options, "a" );
+echo_question( $type, $statement, $good_answer, $options, "b" );
 ?>
